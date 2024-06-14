@@ -41,7 +41,7 @@ let filter = (x) => {
         let arrayNew = array.filter((item) => item.name.includes(x))
         return arrayNew;
     }
-}
+} 
 
 
 input.addEventListener('input', function(){
