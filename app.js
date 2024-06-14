@@ -13,7 +13,6 @@ let input = document.querySelector('input');
 let showNotes = (element, text) => {
     let newList;
     let newArray = filter(text)
-    console.log(filter(text));
 
     if(newArray.length > 0 || text.length > 0){
         newList = newArray;
@@ -27,7 +26,6 @@ let showNotes = (element, text) => {
         note.className = "rounded p-1 m-2 shadow border-2"
         element.appendChild(note);
     })
-    
 }
 
 let restart = (x) => {
@@ -43,9 +41,11 @@ let filter = (x) => {
     }
 } 
 
-
 input.addEventListener('input', function(){
     let textValue = input.value;
     showNotes(div, textValue)
 });
+
+showNotes(div, "");
+input.focus()
 
